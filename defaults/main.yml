@@ -1,2 +1,5 @@
 ---
 postgres_version: 9.6
+
+# Created by default on Debian
+postgres_user: postgres
