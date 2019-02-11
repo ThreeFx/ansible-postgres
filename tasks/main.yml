@@ -9,7 +9,6 @@
       - python-psycopg2
     state: present
 
-
 - name: Configure PostgreSQL
   become: True
   template:
@@ -18,7 +17,7 @@
     owner: "{{ postgres_user }}"
     group: "{{ postgres_user }}"
     mode: 0640
+  notify: restart postgres
   with_items:
     - pg_hba.conf
     - postgresql.conf
-  notify:restart postgres
