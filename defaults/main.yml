@@ -1,2 +1,4 @@
 ---
 postgres_version: 9.6
+
+postgres_listen_address: "127.0.0.1/32"
